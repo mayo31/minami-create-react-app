@@ -1,0 +1,155 @@
+[
+  {
+    "articleTitle": "記事その1タイトル",
+    "articleUrl": "記事その1URL",
+    "articleDescription": "記事その1description",
+    "articleImage": "https://source.unsplash.com/random",
+    "tagData": [
+      {
+      "tag": "タグ1",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ2",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ3",
+      "tagUrl": ""
+      }            
+    ],
+    "markData": [
+      {
+       "account": "ユーザー1-1",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー1-2",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー1-3",
+       "accountImage": "https://source.unsplash.com/random"
+      }
+    ],
+    "commentData": [
+      {
+       "author": "その1ユーザー1",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その1コメント1"
+      },
+      {
+       "author": "その1ユーザー2",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その1コメント2"
+      },
+      {
+       "author": "その1ユーザー3",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その1コメント3"
+      }
+    ]
+  },
+  {
+    "articleTitle": "記事その2タイトル",
+    "articleUrl": "記事その2URL",
+    "articleDescription": "記事その2description",
+    "articleImage": "https://source.unsplash.com/random",
+    "tagData": [
+      {
+      "tag": "タグ1",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ2",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ3",
+      "tagUrl": ""
+      }            
+    ],
+    "markData": [
+      {
+       "account": "ユーザー2-1",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー2-2",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー2-3",
+       "accountImage": "https://source.unsplash.com/random"
+      }
+    ],
+    "commentData": [
+      {
+       "author": "その2ユーザー1",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その2コメント1"
+      },
+      {
+       "author": "その2ユーザー2",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その2コメント2"
+      },
+      {
+       "author": "その2ユーザー3",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その2コメント3"
+      }
+    ]
+  },
+  {
+    "articleTitle": "記事その3タイトル",
+    "articleUrl": "記事その3URL",
+    "articleDescription": "記事その3description",
+    "articleImage": "https://source.unsplash.com/random",
+    "tagData": [
+      {
+      "tag": "タグ1",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ2",
+      "tagUrl": ""
+      },
+      {
+      "tag": "タグ3",
+      "tagUrl": ""
+      }            
+    ],
+    "markData": [
+      {
+       "account": "ユーザー3-1",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー3-2",
+       "accountImage": "https://source.unsplash.com/random"
+      },
+      {
+       "account": "ユーザー3-3",
+       "accountImage": "https://source.unsplash.com/random"
+      }
+    ],
+    "commentData": [
+      {
+       "author": "その3ユーザー1",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その3コメント1"
+      },
+      {
+       "author": "その3ユーザー2",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その3コメント2"
+      },
+      {
+       "author": "その3ユーザー3",
+       "authorImage": "https://source.unsplash.com/random",
+       "comment": "その3コメント3"
+      }
+    ]
+  }
+]

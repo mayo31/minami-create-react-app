@@ -1,0 +1,746 @@
+@charset "UTF-8";
+
+/*-- ベース --*/
+
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  background: #f0f0f0;
+  font-size: 1.5em;
+  font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+  line-height: 1.5;
+}
+
+body * {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.wrap {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+:-webkit-autofill {
+  box-shadow: inset 0 0 0 10em #fff;
+}
+
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+a,
+button,
+.hover,
+article,
+label,
+.check-list label,
+[type="button"],
+[type="submit"] {
+  outline: none;
+  transition: opacity 0.1s 0s linear;
+}
+
+label:not([for^="menu0"]):hover,
+a:hover,
+button:not(#overlay):hover,
+.hover,
+#common-header h1:hover,
+article:not(.overlay):hover,
+.check-list label:hover,
+[type="submit"]:hover {
+  opacity: 0.7!important;
+}
+
+/*-- パーツ --*/
+
+[data-account] {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: url(/images/account/default.png) no-repeat 50% 50%;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.box {
+  margin-top: 10px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.paragraph {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/*--  ボタン --*/
+
+[class*="button0"],
+[class*="button0"]:visited,
+[class*="button0"]:hover {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 2.6em;
+  line-height: 2.6em;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.button01 {
+  background: rgba(255,105,180,1);
+}
+
+.button02 {
+  background: #666;
+}
+
+/*--  フォーム --*/
+
+[type="text"],
+[type="password"],
+[type="email"],
+[type="url"],
+[type="number"],
+textarea {
+  width: 100%;
+  height: 3em;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+[type="radio"],
+[type="checkbox"] {
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  z-index: -9999;
+}
+
+label {
+  cursor: pointer;
+}
+
+/*--  ログイン --*/
+
+#menu form {
+  color: #eee;
+}
+
+#menu form > :not(:first-child) {
+  margin: 10px 0 0 0;
+}
+
+[for="form-login-save"] {
+  margin-bottom: 10px;
+}
+
+/*-- サイトヘッダ --*/
+
+#common-header {
+  display: table;
+  padding: 20px 20px 10px 20px;
+  z-index: 1;
+}
+
+#common-header h1 {
+  display: table-cell;
+  width: 200px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#common-header h1 svg {
+  cursor: pointer;
+  width: 195px;
+  height: 50px;
+}
+
+#common-header h1 path {
+  stroke: rgba(255,105,180,1);
+  fill: rgba(255,105,180,1);
+}
+
+#common-header h1 circle {
+  stroke: rgba(255,105,180,1);
+  fill: rgba(0,0,0,0);
+  stroke-width: 2;
+}
+
+#common-header h2 {
+  margin: 0;
+}
+
+/*-- nav --*/
+
+nav#menu {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+}
+
+nav#menu > label:not([for="menu00"]) {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 10px;
+  border: 1px solid rgba(255,105,180,1);
+  border-radius: 50%;
+  transition: all 0.2s 0s ease;
+}
+
+nav#menu > label:not([for="menu00"]):hover {
+  box-shadow: inset 0 0 0 25px rgba(255,105,180,1);
+}
+
+nav#menu > [type="radio"] + label:not([for="menu00"]) + * {
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  margin: 0 0 0 -50%;
+  padding: 0;
+  text-align: left;
+  z-index: 10;
+  transition: all 0.3s 0s ease-in-out;
+}
+
+nav#menu > [type="radio"]:checked + label:not([for="menu00"]) + * {
+  overflow-y: auto;
+  height: auto;
+  max-height: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+nav#menu > [type="radio"]:checked + label:not([for="menu00"]) + *::-webkit-scrollbar {
+  display: none;
+}
+
+[for^="menu"] {
+  position: relative;
+}
+
+[for^="menu"] > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 30px;
+  transform: translate(-50%,-50%);
+}
+
+[for^="menu"] > svg path {
+  stroke: rgba(255,105,180,1);
+  fill:none;
+  stroke-miterlimit:10;
+}
+
+[for="menu01"] > svg {
+  width: 40px;
+  height: 30px;
+}
+
+[for="menu02"] > svg {
+  width: 30px;
+  height: 40px;
+}
+
+[for^="menu"]:hover > svg path {
+  fill: rgba(255,255,255,0.8);
+}
+
+nav#menu > label[style] {
+  background: url() rgba(0,0,0,0) 50% 50%;
+  background-size: cover;
+}
+
+nav#menu > label[style]:hover {
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+#form-signup + button {
+  margin: 20px 0 0 0;
+}
+
+/* ログイントグル */
+
+#form-login,
+#form-signup {
+  position: relative;
+  max-height: auto;
+  overflow: auto;
+  transition: all 0.5s 0s ease;
+}
+
+.signup #form-login,
+.login #form-signup {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/*-- URLフォーム --*/
+
+#form-url-input {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 10px auto;
+  padding: 0;
+}
+
+#form-url-input [type="url"] {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 6.5em);
+  height: 2.6em;
+  line-height: 2.6em;
+  margin: 0 0.5em 0 0;
+  border: none;
+  vertical-align: middle;
+}
+
+#form-url-input #url-submit {
+  display: inline-block;
+  width: auto;
+  height: 2.45em;
+  line-height: 2.45em;
+  margin: 0;
+  padding: 0 1em;
+  vertical-align: top;
+}
+
+#tag-input-list {
+  display: inline;
+}
+
+#tag-input-list [type="text"] {
+  width: 7em;
+  margin-bottom: 5px;
+}
+
+#tag-input {
+	display: inline-block;
+	width: 9em;
+	height: 2.2em;
+	line-height: 2.2em;
+  margin-bottom: 5px;
+  padding: 0 4.5em 0 10px;
+}
+
+#tag-input + button {
+  cursor: pointer;
+  display: inline-block;
+  width: 4em;
+	height: 2.2em;
+	line-height: 2.2em;
+  margin: -1px 0 0 -4.5em;
+  color :#333;
+  border-left: 1px solid #ccc;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.check-list > li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  font-size: 1.3rem;
+}
+
+.check-list label {
+  cursor: pointer;
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 0.5em;
+  color: #fff;
+  border-radius: 2px;
+  background: #999;
+}
+
+.check-list :checked + label {
+  background: rgba(255,105,180,1);
+}
+
+/*-- リスト --*/
+
+.checkbox-list > li {
+  display: inline-block;
+}
+
+.checkbox-list label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 30px;
+  vertical-align: top;
+}
+
+.checkbox-list label:before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: -7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.checkbox-list label:after {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 8px;
+  display: none;
+  width: 8px;
+  height: 16px;
+  margin-top: -10px;
+  box-shadow: inset -2px 0 rgba(255,105,180,1), inset 0 -2px rgba(255,105,180,1);
+  transform: rotate(45deg);
+}
+
+.checkbox-list :checked + label:before {
+  border-color: rgba(255,105,180,1);
+}
+
+.checkbox-list :checked + label:after {
+  display: block;
+}
+
+.tag-list {
+	margin-top: 10px;
+}
+
+.tag-list > li {
+	display: inline-block;
+  margin-right: 5px;
+}
+
+.tag-list > li  > a,
+.tag-list > li  > a:hover {
+  cursor: pointer;
+  display: block;
+	height: 2.4em;
+	line-height: 2.4em;
+	padding: 0 0.5em;
+	color: #666;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	background: #fff;
+	font-size: 1.2rem;
+}
+
+.account-list {
+  letter-spacing: 0;
+}
+
+.account-list  > li {
+  margin-right: 5px;
+}
+
+.comment-list {
+  border-top: 1px dashed #ccc;
+  background: #fff;
+}
+
+.comment-list > li {
+  border-bottom: 1px dashed #ccc;
+}
+
+.comment-list [data-account] {
+  margin: 10px;
+}
+
+.comment-list > li > span {
+  white-space: pre-wrap;
+}
+
+.comment-list > li > span:last-child {
+  display: inline-block;
+  width: calc(100% - 60px);
+  padding: 10px 10px 10px 0;
+  vertical-align: top;
+}
+
+.comment-list > li > span:last-child > span {
+  display: block;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.comment-list > li time {
+  margin: 0 0 0 10px;
+  font-size: 1rem;
+}
+
+/*-- article --*/
+
+#article-list {
+  position: static;
+  margin: 0 auto;
+}
+
+#article-list > li {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  margin: 10px;
+  padding: 2px;
+}
+
+article {
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid rgba(255,105,180,1);
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+article > a:link,
+article > a:visited,
+article > a:hover {
+  pointer-events: none;
+  position: relative;
+  display: block;
+  height: 200px;
+  color: rgba(255,105,180,1);
+  background: url(/images/noimage.png) no-repeat 50% 50%;
+  background-size: cover;
+  text-decoration: none;
+}
+
+article h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8em;
+  background: rgba(255,255,255,0.9);
+  font-size: 1.6rem;
+}
+
+article.overlay h2 {
+  font-size: 2rem;
+}
+
+article h3 {
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+article h2 + p {
+  padding: 0 1em 1em 1em;
+  background: rgba(0,0,0,0.5);
+}
+
+article > button {
+  margin: 20px 0 0 0;
+}
+
+.author {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.author span + span {
+  margin-left: 10px;
+}
+
+/*-- articleOverlay -- */
+
+article.overlay {
+  overflow: auto;
+  cursor: default;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  border-radius: 0;
+  background: #efefef;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+article.overlay h2,
+article.overlay h2 + p {
+  position: static;
+  height: auto;
+  padding-right: 50px;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+}
+
+article.overlay > a:link,
+article.overlay > a:visited,
+article.overlay > a:hover {
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  height: auto;
+  border-radius: 4px;
+}
+
+article.overlay > a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 0;
+  box-shadow: inset 0 4px 0 0 #fff, inset -4px 0 0 0 #fff;
+  transform: rotate(45deg);
+}
+
+article h3,
+article p,
+article .tag-list,
+article .comment-list,
+article .account-list {
+  display: none;
+}
+
+article.overlay h3,
+article.overlay p,
+article.overlay .tag-list,
+article.overlay .comment-list,
+article.overlay .account-list {
+  display: block;
+}
+
+/*--  コメントtextarea --*/
+
+.comment-input textarea {
+  resize: none;
+  height: 5em;
+  margin: 20px 0 10px 0;
+  transition: all 0.2s 0s ease;
+}
+
+/*-- overlay -- */
+
+#overlay,
+#spinner {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+#overlay.article {
+  z-index: 99;
+}
+
+#spinner {
+  z-index: 9999;
+}
+
+.overlay-close {
+  cursor: pointer;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  display: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #eee;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid  rgba(255,255,255,0.7);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: all 0.1s 0s ease;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2rem;
+}
+
+:not(:checked) + [for="menu00"] {
+  display: block;
+}
+
+/*-- spinner --*/
+
+#spinner {
+  cursor: default;
+  display: block;
+}
+
+#spinner:after {
+  content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 30px;
+	height: 30px;
+  border: 5px solid rgba(255,255,255,0.6);
+  border-left: 5px solid rgba(255,255,255,1);
+	border-radius: 50%;
+	animation: spinner 0.7s infinite linear;
+}
+
+@keyframes spinner {
+0% {
+	transform: rotate(0deg);
+	}
+100% {
+	transform: rotate(360deg);
+	}
+}

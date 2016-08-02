@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+.wrap,
+article.overlay {
+  width: 620px;
+}
+
+#article-list > li  {
+  width: 270px;
+}
+
+#article-list > li:nth-child(2n-1) {
+  margin-left: 0;
+}
+
+#article-list > li:nth-child(2n) {
+  margin-right: 0;
+}
+
+}

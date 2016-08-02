@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 640px){
+
+.wrap,
+article.overlay {
+  width: 90%;
+}
+
+#article-list > li,
+#article-list > li:first-child {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#common-header h1 {
+  margin: 0;
+  width: 120px;
+}
+
+#common-header h1 svg {
+  width: 120px;
+}
+
+nav#menu > label:not([for="menu00"]) {
+  width: 40px;
+  height: 40px;
+}
+
+nav#menu > label:not([for="menu00"]) svg {
+  transform: scale(0.8) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+
+}
